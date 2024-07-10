@@ -1,0 +1,384 @@
+.totalpp
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(rgb(20, 20, 20),rgb(17,17,17));
+}
+#leftpp
+{
+    background-color: rgb(31, 31, 31);
+    /* background-color: black; */
+    /* position: absolute; */
+    height: 80%;
+    width: 24%;
+    /* border: 3px groove white; */
+    border-radius: 20px;
+    /* top: 90px;
+    left: 220px; */
+    box-shadow: 1px 2px 15px 5px black;
+    margin-top: 5%;
+}
+#rightpp
+{
+    background-color: rgb(31, 31, 31);
+    /* background-color: white; */
+    /* position: absolute; */
+    height: 80%;
+    width: 60%;
+
+    /* left: 370px; */
+    border-radius: 20px;
+    box-shadow: 1px 2px 15px 5px black;
+    margin-top: 5%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+#lefttoppp
+{
+    /* position: absolute; */
+    width: 90%;
+    height: 45%;
+    margin: auto;
+    /* left: 15px;
+    top: 20px; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 1px black;
+    margin-top: 5%;
+    /* animation-name: Profile;
+    animation-duration: 20s;
+    animation-iteration-count: infinite; */
+}
+@keyframes Profile{
+    0%{box-shadow: -2px -2px 2px 1px rgb(177, 42, 42),2px 2px 2px 1px rgb(177, 42, 42);}
+    18%{box-shadow: -2px -2px 2px 1px rgb(226, 226, 45),2px 2px 2px 1px rgb(226,226,45);}
+    36%{box-shadow: -2px -2px 2px 1px rgb(131, 224, 25),2px 2px 2px 1px rgb(131,224,25);}
+    54%{box-shadow: 2px 2px 2px 1px rgb(29, 164, 167),-2px -2px 2px 1px rgb(26,164,167);}
+    72%{box-shadow: -2px -2px 2px 1px rgb(26, 23, 202),2px 2px 2px 1px rgb(26,23,202);}
+    85%{box-shadow: -2px -2px 2px 1px rgb(218, 17, 198),2px 2px 2px 1px rgb(218,17,198);}
+    100%{box-shadow: -2px -2px 2px 1px rgb(184, 42, 61),2px 2px 2px 1px rgb(184, 42, 61);}
+}
+#leftbottompp
+{
+    /* position: absolute; */
+    /* border: 2px solid white; */
+    width: 90%;
+    height: 40%;
+    /* top: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#leftbottompp ul
+{
+    color: white;
+    font-size: 18px;
+    justify-content: space-around;
+    list-style: none;
+    font-family: Lora, serif;
+    cursor: pointer;
+}
+.cpp
+{
+    width: 45%;
+    height: 50%;
+    margin: auto;
+    padding-top: 3%;
+    /* justify-content: center;
+    align-items: center; */
+}
+#circlepp
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgb(0, 60, 255);
+    /* top: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#circlepp::after
+{
+    content: '';
+    position: absolute;
+    height:150px;
+    width: 150px;
+    background: conic-gradient(transparent,transparent,transparent,transparent,transparent,transparent,rgb(255, 255, 255));
+    animation: pro 2s linear infinite;
+}
+#circlepp::before
+{
+    content: '';
+    position: absolute;
+    height:150px;
+    width: 150px;
+    background: conic-gradient(transparent,transparent,transparent,transparent,transparent,transparent,rgb(255, 255, 255));
+    animation: pro 2s linear infinite;
+    animation-delay: -1s;
+}
+@keyframes pro
+{
+    0%{transform:rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+#circlepp span{
+    inset: 5px;
+    position: absolute;
+    background-color: grey;
+    border-radius: 50%;
+    z-index: 1;
+}
+#namepp
+{
+    /* position: absolute; */
+    color: white;
+    font-size: 25px;
+    /* top: 170px; */
+    margin: auto;
+    min-width: 10%;
+    margin-top: 7%;
+    text-align: center;
+    width: 297px;
+}
+#usernamepp
+{
+    /* position: absolute; */
+    color: white;
+    font-size: 15px;
+    /* top: 220px; */
+    margin: auto;
+    text-align: center;
+    min-width: 10%;
+    width: 297px;
+}
+#profiledetailsholderdivonpp{
+    width: 90%;
+    height: 60%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+#profilegenresholderdivonpp{
+    width: 90%;
+    height: 30%;
+    margin: auto;
+}
+#profilelablediv{
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-size: 120%;
+    justify-items: center;
+}
+#profilelablepara{
+    width: 40%;
+    opacity: 0.5;
+}
+#profilevalinput{
+    margin-top: 14px;
+    width: 60%;
+    padding-left: 3%;
+    /* border: none; */
+    /* outline: none; */
+    /* background: none; */
+    /* color: white; */
+    border-radius: 12px;
+    font-size: 100%;
+    height: 35px;
+}
+#profilevalinput.bio{
+    font-size: 120%;
+    height: 70px;
+}
+#profileselector{
+    /* z-index: 1; */
+    /* position: absolute; */
+    /* right: 425px; */
+    min-width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    height: 35px;
+    margin-left: 20px;
+    margin-top: 16px;
+    font-size: 100%;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    cursor: pointer;
+}
+#profilefavgenheading{
+    text-align: center;
+    width: 150px;
+    /* height: 30px;  */
+    font-size: 120%;
+}
+#profilefavgenvaluesholderdiv{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+.genrebuttons{
+    margin-right: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    height: 25px;
+    outline: none;
+}
+#editicondivonprofiledet{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+}
+#editicondivonprofiledet.saveiconprodet{
+    right: 14%;
+}
+#changesyesorno{
+    z-index: 5;
+    width: 170px;
+    height: 100px;
+    padding-left: 40px;
+    border-radius: 20px;
+    box-shadow: black 1px 1px 4px 1px;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    background: linear-gradient(rgb(20, 20, 20), rgb(17, 17, 17));
+}
+/* #detailspp
+{
+    border: 2px groove white;
+    height: 510px;
+    width: 700px;
+    position: absolute;
+    left: 60px;
+} */
+/* #regionpp
+{
+    width: 160px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px;
+} */
+/* #Yearpp
+{
+    margin-left: 8px;
+    width: 130px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+} */
+/* #infonamepp
+{
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+} */
+/* #infoemailpp
+{
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+} */
+/* #mailico
+{
+    position: absolute;
+    color: black;
+    left: 278px;
+    top: 97px;
+} */
+/* #setpp button
+{
+    height: 35px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 12px;
+    border: 1px groove rgb(55, 255, 0);
+    outline: none;
+    color: white;
+}
+#setpp{
+    position: absolute;
+    border: 2px groove white;
+    height: 120px;
+    width: 500px;
+    top: 310px;
+    left: 160px;
+} */
+/* #detailspp h4{
+    position: absolute;
+    top: 315px;
+}
+.savepp
+{
+    position: absolute;
+    left: 530px;
+    top: 160px;
+}
+.editpp
+{
+    position: absolute;
+    left: 490px;
+    top: 160px;
+}
+#sidepp
+{
+    margin: 12px;
+} */
+
+
+/*New*/
+#discayes{
+    background:none;
+    border:0.7px groove  orangered; 
+    color: orangered;
+}
+#discayes:hover{
+    border-radius: 2px;
+    background-color: orangered;
+    box-shadow: 1px 1px 4px 1px orangered;
+    color: white;
+}
+#discano{
+    background:none;
+    border:0.7px groove  rgb(31, 236, 38); 
+    color: rgb(5, 249, 13);
+}
+#discano:hover{
+    border-radius: 2px;
+    background-color: rgb(22, 188, 28);
+    box-shadow: 1px 1px 4px 1px rgb(5, 175, 11);
+    color: white;
+}
+
+#homebutdiv{
+    position:absolute;
+    left: 0px;
+    margin-top: 10px;
+    width:40px;
+    height:40px;
+    border-radius:30% 100% 100% 30%;
+    background-color:rgb(20, 20, 20);
+    box-shadow: 0px 1px 4px 1px black;
+}
+
+#homebutdiv:hover{
+    border-radius:20% 60% 60% 20%;
+    padding-left: 10px;
+}

@@ -1,0 +1,367 @@
+#bookselectionbut
+{
+    background-color: rgb(31,31,31);
+    outline: none;
+    border:.7px groove rgb(36, 185, 36);
+    color:rgb(45, 177, 45);
+    box-shadow: -1px 1px 3px 1px rgb(48, 239, 48);
+    cursor: pointer;
+}
+#bookselectionbut:hover
+{
+    color:white;
+    margin-top: 1px;
+    margin-right: 1px;
+    background-color: rgb(36, 185, 36);
+    border-color: white;
+}
+#topbutofbooks{
+    background: #2c2c2c;
+    bottom: 5%;
+    right: 10%;
+    box-shadow:0px 3px 5px 1px rgb(204, 25, 25);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+    position: fixed;
+}
+#topbutofbooks:hover{
+    background: #323232;
+    bottom:4.7%;
+    box-shadow:0px 1px 4px 1px rgb(228, 38, 38);
+}
+
+#BooksAllBookHolderdiv{
+    width: 66%;
+    height: auto;
+    margin-left: 18%;
+    position: relative;
+    margin-top: 15%;
+    background: none;
+    padding-top: 5%;
+}
+
+#searchandgenreselectordiv{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 1%;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+#Searchbaronbookspage{
+    width: 50%;
+    height: 50px;
+    outline: none;
+    border: none;
+    font-size: 150%;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(31, 31, 31);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#GenreSelcetoronbooks{
+    cursor: pointer;
+    width: 40%;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 120%;
+    font-family: serif;
+    padding-left: 10px;
+    background: linear-gradient(to right, rgb(31,31,31),#000000);
+
+    
+    
+}
+
+#Genreoptionbooks{
+    cursor: pointer;
+    /* color: #6ab7ff; */
+    background-color:rgb(31, 31, 31);
+}
+
+#dynamicbooksholdingdiv{
+    box-shadow: black 1px 1.5px 10px 3px;
+    border-radius: 10px 30px 30px 10px;
+    width: 100%;
+    height: 700px;
+    margin: auto auto 100px;
+    background-color: rgb(31, 31, 31);
+    position: relative;
+}
+
+#dynamicbookimageholder{
+    width: 35%;
+    height: 70%;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+#descriptionratingholderdiv{
+    width: 50%;
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 45%;
+    padding-left: 2%;
+    height: 80%;
+}
+
+#bookauthor{
+    font-size: 150%;
+    color: ghostwhite;
+}
+
+#bookauthorname{
+    margin-left: 5%;
+    font-size: 130%;
+    margin-top: 24px;
+    color: mintcream;
+}
+
+#bookdescription{
+    overflow: auto;
+    scrollbar-width: thin;
+    max-height: 65%;
+    scroll-behavior: smooth;
+    margin-top: 2%;
+    font-size: 95%;
+    background: none;
+    color: aliceblue;
+}
+
+#bookreviewandrating{
+    font-size: 120%;
+    color: snow;
+}
+
+#bookreviewratingstaronbookspage .css-1x1lh1c-MuiRating-root {
+    font-size: 1.875em;
+}
+
+#booknameonbookpage{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 160%;
+    max-width: 35%;
+    height: 6%;
+    overflow-x: auto;
+    color: lavenderblush;
+}
+
+#nobooksfounddiv{
+    box-shadow: black 1px 1.5px 10px 3px;
+    border-radius: 10px 30px 30px 10px;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    margin: auto auto 100px;
+    background-color: rgb(31, 31, 31);
+    text-align: center;
+    font-size: 40px;
+    color: rgb(31, 31, 31);
+    text-shadow: black 1px 2px 1px;
+    padding-top: 100px;
+}
+
+#preloader{
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background:black no-repeat center;
+    position: fixed;
+  }
+
+
+
+/* #serachicononbookspage {
+    position: absolute;
+    right: 1%;
+    top: .77%;
+} */
+
+/* #genreholderdivonbookspage{
+    width: 100%;
+    margin-top: 4px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(31, 31, 31);
+} */
+
+
+
+/*********************************************************************/
+
+
+
+@media screen and (max-width:1210px) 
+{
+    
+    #Searchbaronbookspage{
+        height: 40px;
+    }
+
+    #GenreSelcetoronbooks{
+        height: 40px;
+    }
+
+    #dynamicbooksholdingdiv{
+        height: 600px;
+    }
+
+    #booknameonbookpage{
+        font-size: 120%;
+    }
+
+    #bookauthor {
+        font-size: 110%;
+    }
+
+    #bookauthorname {
+        font-size: 100%;
+        margin-top: 19px;
+    }
+
+    #bookdescription{
+        font-size: 85%;
+    }
+
+    #bookreviewandrating{
+        font-size: 110%;
+    }
+
+    #bookreviewratingstaronbookspage .css-1x1lh1c-MuiRating-root {
+        font-size: 1.5em;
+    }
+
+    #topbutofbooks{
+        width: 40px;
+        height: 40px;
+    }
+
+    #topbutofbooks .css-i4bv87-MuiSvgIcon-root{
+        font-size: 1.3rem;
+    }
+
+    #nobooksfounddiv{
+        height: 200px;
+        font-size: 35px;
+    }
+
+}
+
+@media screen and (max-width: 840px)
+{
+    #Searchbaronbookspage {
+        height: 30px;
+        font-size: 110%;
+    }
+    
+    #GenreSelcetoronbooks {
+        height: 35px;
+        font-size: 110%;
+    }
+
+    #dynamicbooksholdingdiv {
+        height: 450px;
+        margin-bottom: 70px;
+    }
+
+    #booknameonbookpage {
+        font-size: 100%;
+    }
+
+    #bookauthor {
+        font-size: 90%;
+    }
+
+    #bookauthorname {
+        font-size: 85%;
+        margin-top: 15px;
+    }
+
+    #bookdescription {
+        font-size: 70%;
+    }
+
+    #bookreviewandrating {
+        font-size: 95%;
+    }
+
+    #bookreviewratingstaronbookspage .css-1x1lh1c-MuiRating-root {
+        font-size: 1.3em;
+    }
+
+    #nobooksfounddiv {
+        height: 150px;
+        font-size: 30px;
+    }
+
+    #topbutofbooks {
+        width: 35px;
+        height: 35px;
+    }
+
+    #topbutofbooks .css-i4bv87-MuiSvgIcon-root {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 630px)
+{
+    #searchandgenreselectordiv {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 0%;
+    }
+
+    #Searchbaronbookspage {
+        height: 30px;
+        font-size: 100%;
+    }
+    #GenreSelcetoronbooks {
+        height: 35px;
+        font-size: 100%;
+    }
+    #dynamicbooksholdingdiv {
+        height: 400px;
+        margin-bottom: 45px;
+    }
+    #dynamicbookimageholder {
+        height: 50%;
+    }
+    #booknameonbookpage {
+        font-size: 80%;
+    }
+    #bookauthor {
+        font-size: 70%;
+    }
+    #bookauthorname {
+        font-size: 65%;
+        margin-top: 10px;
+    }
+    #bookdescription {
+        font-size: 60%;
+    }
+    #bookreviewandrating {
+        font-size: 85%;
+    }
+    #bookreviewratingstaronbookspage .css-1x1lh1c-MuiRating-root {
+        font-size: 1.2em;
+    }
+    #topbutofbooks {
+        width: 30px;
+        height: 30px;
+        right: 7%;
+    }
+    #topbutofbooks .css-i4bv87-MuiSvgIcon-root {
+        font-size: .9rem;
+    }
+}

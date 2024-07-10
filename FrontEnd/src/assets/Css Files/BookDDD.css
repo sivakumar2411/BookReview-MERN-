@@ -1,0 +1,60 @@
+#bookprofilepic{
+    width: 60%;
+    margin: auto;
+    height: 480px;
+}
+#reviewnameratingcontainer{
+    max-width: 60%;
+    min-width: 30%;
+    margin: auto;
+    font-size: 150%;
+    font-family: cursive;
+    display: flex;
+    justify-content: space-between;
+}
+#reviewbookname{
+    min-width: 20%;
+    max-width: 70%;
+}
+#reviewoverallrating{
+    margin-top: 7%;
+}
+#reviewdetailcontainer{
+    max-width: 60%;
+    margin: auto;
+}
+#reviewoverallrating .css-1x1lh1c-MuiRating-root{
+    font-size: 1.875rem;
+}
+
+
+
+/***********************************************************/
+
+
+
+@media screen and (max-width:1210px) 
+{
+    #bookprofilepic{
+        height: 350px;
+    }
+    #reviewnameratingcontainer{
+        font-size: 120%;
+    }
+    #reviewoverallrating .css-1x1lh1c-MuiRating-root{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:825px) 
+{
+    #bookprofilepic {
+        height: 300px;
+    }
+    #reviewnameratingcontainer {
+        font-size: 100%;
+    }
+    #reviewoverallrating .css-1x1lh1c-MuiRating-root {
+        font-size: 1.2rem;
+    }
+}
