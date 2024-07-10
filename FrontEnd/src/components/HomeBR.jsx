@@ -54,7 +54,6 @@ const HomeBR = () => {
     //   }
     //   fetchG();
     const fetch = async()=>{
-      console.log(ADOUser.intrestedGenres)
     await getRecBooks(ADOUser.intrestedGenres)
     .then((res)=>{setsb(res.data);});
     setV(1);}
