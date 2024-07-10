@@ -26,7 +26,7 @@ const SignIn = () => {
     const fetchdata = async()=>
     {
       await getAllUserDatasFP()
-      .then((res)=>setData(res.data))
+      .then((res)=>setData(res.json))
       .catch((err)=>console.log(err));
     }
     fetchdata();

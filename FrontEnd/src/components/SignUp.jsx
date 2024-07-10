@@ -41,8 +41,8 @@ const SignUp = () => {
     setMismatch(true);
     else
     {
-      const nameexistorno=data?.findIndex(({name})=> name===udata.name);
-      const Emexistorno=data?.findIndex(({email})=> email===udata.email);
+      const nameexistorno=data?data.findIndex(({name})=> name===udata.name) :-1;
+      const Emexistorno=data?data.findIndex(({email})=> email===udata.email):-1;
       if(nameexistorno===-1&&Emexistorno===-1)
       {
           addNewUser(udata);
