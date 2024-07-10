@@ -7,7 +7,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 const AddBook = () => {
     const[selgen,chgen]=useState(false);
-    const [bookDts,setDts]=useState({name:"",author:"",description:"",r_Rated:false,genre: {philosophy: false,action: false,fiction: false,romance: false,history: false,nonFiction: false,selfHelpBook: false,biography: false,horror: false,politics: false,comic: false,fantasy: false,all: true}})
+    const [bookDts,setDts]=useState({name:"",author:"",description:"",r_Rated:false,genre: {philosophy: false,action: false,fiction: false,romance: false,history: false,nonFiction: false,selfHelpBook: false,biography: false,horror: false,politics: false,comics: false,fantasy: false,all: true}})
     const bookcover=(event)=>{
         const file=event.target.files[0];
         const reader=new FileReader();

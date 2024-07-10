@@ -75,7 +75,7 @@ const UserDatas = new mongoose.Schema({
         biography: Boolean,
         horror: Boolean,
         politics: Boolean,
-        comic: Boolean,
+        comics: Boolean,
         fantasy: Boolean
     },
     reviews:{
