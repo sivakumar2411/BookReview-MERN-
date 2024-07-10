@@ -36,8 +36,8 @@ const SignIn = () => {
     event.preventDefault();
     const nameorEm=document.getElementById("demo-helper-text-misaligned-no-helpersi1").value;
     const pass=document.getElementById("demo-helper-text-misaligned-no-helpersi2").value;
-    const nameexistorno=data.findIndex(({name})=> name===nameorEm);
-    const Emexistorno=data.findIndex(({email})=> email===nameorEm);
+    const nameexistorno=data?data.findIndex(({name})=> name===nameorEm):-1;
+    const Emexistorno=data?data.findIndex(({email})=> email===nameorEm):-1;
     if(nameexistorno===-1&&Emexistorno===-1)
     alert("UserName and Email Doesn't Exist");
     else if((Emexistorno!==-1&&data[Emexistorno].password===pass)||(nameexistorno!==-1&&data[nameexistorno].password===pass))
