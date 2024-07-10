@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e0a1d955.css",
+    "main.js": "/static/js/main.2736c242.js",
+    "static/js/651.010224ab.chunk.js": "/static/js/651.010224ab.chunk.js",
+    "static/media/silhouettes-hills-street-lamps-cloudy-sky-during-beautiful-sunset.jpg": "/static/media/silhouettes-hills-street-lamps-cloudy-sky-during-beautiful-sunset.c2f6f0929f63c2e35ca3.jpg",
+    "static/media/Avengers.jpg": "/static/media/Avengers.af7b3ee226107e3f1f07.jpg",
+    "static/media/Thirukkural.jpg": "/static/media/Thirukkural.598dadfa282077a6f761.jpg",
+    "static/media/Superior Spider-Man.jpeg": "/static/media/Superior Spider-Man.97a0d4a00419f6b35a6d.jpeg",
+    "static/media/Atomic Habits.jpg": "/static/media/Atomic Habits.2b3613a399d13b7b7872.jpg",
+    "static/media/Loki.jpg": "/static/media/Loki.acd2d07133aa145aa4b5.jpg",
+    "static/media/GOT.jpeg": "/static/media/GOT.eb5e088271c8c76b9d7e.jpeg",
+    "static/media/HP HBP.jpeg": "/static/media/HP HBP.b06a5faca9489253613a.jpeg",
+    "static/media/bbyprof1.avif": "/static/media/bbyprof1.5486319917fc9d05c7d0.avif",
+    "static/media/Batman.avif": "/static/media/Batman.7cf1ca2285bff5dd011f.avif",
+    "static/media/Joker.avif": "/static/media/Joker.e9a75518f6bd051334bd.avif",
+    "static/media/Home.jpg": "/static/media/Home.4d0ac2370d911fd26f45.jpg",
+    "static/media/boy.webp": "/static/media/boy.90eaefe7242617bf5f03.webp",
+    "static/media/Dune.jpeg": "/static/media/Dune.25c75a459ae4f434174f.jpeg",
+    "static/media/The Little Prince.jpeg": "/static/media/The Little Prince.e35b2272c79123acc640.jpeg",
+    "static/media/Tholkaappiyam.webp": "/static/media/Tholkaappiyam.e4fbdaaa3e801c4f246d.webp",
+    "static/media/RDPD.jpg": "/static/media/RDPD.7c9f9b7bce69f48c501d.jpg",
+    "static/media/Lord of the Rings.jpg": "/static/media/Lord of the Rings.247fb6c8a955feec3c08.jpg",
+    "static/media/images.jpeg": "/static/media/images.cc3c72cc9cc4f94da8ed.jpeg",
+    "index.html": "/index.html",
+    "main.e0a1d955.css.map": "/static/css/main.e0a1d955.css.map",
+    "main.2736c242.js.map": "/static/js/main.2736c242.js.map",
+    "651.010224ab.chunk.js.map": "/static/js/651.010224ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0a1d955.css",
+    "static/js/main.2736c242.js"
+  ]
+}
