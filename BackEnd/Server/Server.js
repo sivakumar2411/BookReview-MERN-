@@ -22,7 +22,7 @@ app.use(Routes);
 
 
 // app.use(cors({origin:"http://localhost:3000"}));
-app.use(cors());
+app.use(cors({origin: 'https://bookreview-mern.onrender.com'}));
 
 app.get("*",(req,res)=>{
 
