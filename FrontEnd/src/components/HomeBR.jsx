@@ -53,15 +53,15 @@ const HomeBR = () => {
     //     setV(1);
     //   }
     //   fetchG();
-    // const fetch = async()=>{
-    // await getRecBooks(ADOUser.intrestedGenres)
-    // .then((res)=>setsb(res.data));
-    // setV(1);}
-    // fetch();
+    const fetch = async()=>{
+      console.log(ADOUser.intrestedGenres)
+    await getRecBooks(ADOUser.intrestedGenres)
+    .then((res)=>{setsb(res.data);});
+    setV(1);}
+    fetch();
     }
   },[])
   useEffect(()=>{
-    console.log(sugBook);
   },[varri])
 
   const hideloader=()=>{
@@ -79,12 +79,12 @@ const HomeBR = () => {
     
     const fetchshowcasedata=async()=>
     {
-      hideloader();
       // const{data:showcada}=await GetShowCaseDatas();
       //   const Promises=await Promise.all(showcada);
       //   setSCD([...Promises]);
       //   setV(1);
       //   setShowBooks(0);
+      hideloader();
     }
 
     fetchshowcasedata();

@@ -31,15 +31,16 @@ export const GetBookById = async(req,res) =>
 export const GetReccomendedBooks = async(req,res) =>
 {
     try{
-        const {Genre} = req.body;
+        const Genre = req.body;
+        const Genres = Object.keys(Genre).filter(genre => Genre[genre])
         const Books = await BookData.find();
         const data = Books.filter(Book =>{
             let poi = 0;
-            for(const gen of Genre)
+            for(const gen of Genres)
                 if(gen && Book.genre[gen])
                     poi += 5;
             const NB = {
-                ...Book,
+                ...Book.toObject(),
                 poi
             }
             return NB;
@@ -85,7 +86,7 @@ export const NewBook = async(req,res) =>{
 
 export const DeleteBook = async(req,res) =>{
     try{
-        BookData.deleteOne(req.params.id);
+        await BookData.deleteOne(req.params.id);
         res.status(200).json({message:"Book Deleted SuccessFully"});
     }
     catch(error)
@@ -95,17 +96,17 @@ export const DeleteBook = async(req,res) =>{
     }
 }
 
-// export const DeleteRevBook = async(req,res) =>{
-//     try{
-//         BookData.deleteOne(req.params.id);
-//         res.status(200).json({message:"Book Deleted SuccessFully"});
-//     }
-//     catch(error)
-//     {
-//         res.status(500).json({error:"Internal Server Error"});
-//         console.log("Error at Delete Book",error.message);
-//     }
-// }
+export const DeleteRevBook = async(req,res) =>{
+    try{
+        const Book = await BookData.findById(req.params.id);
+        res.status(200).json({message:"Book Review Deleted SuccessFully"});
+    }
+    catch(error)
+    {
+        res.status(500).json({error:"Internal Server Error"});
+        console.log("Error at Delete Review From Book",error.message);
+    }
+}
 
 export const UpdateRevInBook = async(req,res) =>{
     try{

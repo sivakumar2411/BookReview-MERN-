@@ -1,6 +1,6 @@
 import express from "express";
 import { GetAllUser, GetUserById, MSGToAll, NewMSG, PostNewUser, UpdateReview, UpdateUserById } from "../Controller/UserController.js";
-import { DeleteBook, GetAllBooks, GetBookById, NewBook, UpdateBookData, UpdateRevInBook } from "../Controller/BookController.js";
+import { DeleteBook, GetAllBooks, GetBookById, GetReccomendedBooks, NewBook, UpdateBookData, UpdateRevInBook } from "../Controller/BookController.js";
 
 const router = express.Router();
 
@@ -17,6 +17,7 @@ router.put("/UserDatas/MsgById/:id",NewMSG);
 router.post("/BookDatas/InsertNew",NewBook);
 router.get("/BookDatas/GetAll",GetAllBooks);
 router.get("/BookDatas/GetById/:id",GetBookById);
+router.post("/BookDatas/GetRecommdBooks",GetReccomendedBooks);
 router.put("/BookDatas/UpdateById/:id",UpdateBookData);
 router.put("/BookDatas/UpdateById/Review/:id",UpdateRevInBook);
 router.delete("/BookDatas/DeleteById/:id",DeleteBook);
