@@ -123,7 +123,7 @@ export const addNewUser = async (data) => {
 export const addBookReview = async (bookid,newReview) => {
     try {
         const { data: existingData } = await getBookDatasbyid(bookid);
-        const newReviewId =existingData.reviews.length + 1;
+        const newReviewId =existingData.reviews?existingData.reviews.length + 1:1;
         const Review = {
             ...newReview,
             id: newReviewId
@@ -139,7 +139,7 @@ export const addBookReview = async (bookid,newReview) => {
 export const AddreviewHistory=async (revhis,reviewerid)=>{
     try{
     const {data:existingData}=await getUserById(reviewerid);
-    const newid=Math.max(...existingData.reviews.map(({id})=>id),0)
+    const newid=Math.max(...existingData.reviews?.map(({id})=>id),0)
     const Nrevhis={
         ...revhis,
         id:newid+1
