@@ -23,6 +23,11 @@ app.use(Routes);
 
 // app.use(cors({origin:"http://localhost:3000"}));
 // app.use(cors({origin: 'https://bookreview-mern.onrender.com'}));
+app.use(cors({
+    origin: 'https://bookreview-mern.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  }));
 
 app.get("*",(req,res)=>{
 
