@@ -9,12 +9,13 @@
   "version": "1.0.0",
   "main": "Server.js",
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "nodemon": "^3.1.4"
   },
   "scripts": {
     "server": "nodemon BackEnd/Server/Server.js",
     "start": "node BackEnd/Server/Server.js",
-    "build":"npm install && npm install --prefix FrontEnd && npm run build --prefix FrontEnd"
+    "build": "npm install && npm install --prefix FrontEnd && npm run build --prefix FrontEnd"
   },
   "keywords": [],
   "type": "module",

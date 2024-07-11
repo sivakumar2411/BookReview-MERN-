@@ -128,6 +128,9 @@ export const addBookReview = async (bookid,newReview) => {
             ...newReview,
             id: newReviewId
         };
+        if(Review.id === 1)
+            existingData.reviews = Array(Review)
+        else
         existingData.reviews.push(Review);
         await axios.put(`${BE_Api_URL}/BookDatas/UpdateById/${bookid}`,existingData);
     }
@@ -139,12 +142,15 @@ export const addBookReview = async (bookid,newReview) => {
 export const AddreviewHistory=async (revhis,reviewerid)=>{
     try{
     const {data:existingData}=await getUserById(reviewerid);
-    const newid=Math.max(...existingData.reviews?.map(({id})=>id),0)
+    const newid=existingData.reviews?Math.max(...existingData.reviews?.map(({id})=>id)):0;
     const Nrevhis={
         ...revhis,
         id:newid+1
     }
-    existingData.reviews.push(Nrevhis);
+    if(Nrevhis.id === 1)
+        existingData.reviews = Array(Nrevhis)
+    else
+    existingData.reviews?.push(Nrevhis);
     await axios.put(`${BE_Api_URL}/UserDatas/UpdateById/${reviewerid}`,existingData)}
     catch(er){console.log("Error in AddRevHis",er);}
 }

@@ -31,7 +31,7 @@ export const Review = () => {
       await addBookReview(Book.id,newReview);
       await AddreviewHistory(revhis,ADOUser.id);
       const{data:DData}=await getUserById(ADOUser.id);
-      Update(DData.data);
+      Update(DData);
       setSB(true);
     }
   return (

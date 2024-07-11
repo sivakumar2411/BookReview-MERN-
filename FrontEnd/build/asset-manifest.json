@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e0a1d955.css",
-    "main.js": "/static/js/main.abf2018b.js",
+    "main.js": "/static/js/main.2004eb17.js",
     "static/js/845.510933d7.chunk.js": "/static/js/845.510933d7.chunk.js",
     "static/media/silhouettes-hills-street-lamps-cloudy-sky-during-beautiful-sunset.jpg": "/static/media/silhouettes-hills-street-lamps-cloudy-sky-during-beautiful-sunset.c2f6f0929f63c2e35ca3.jpg",
     "static/media/Avengers.jpg": "/static/media/Avengers.af7b3ee226107e3f1f07.jpg",
@@ -24,11 +24,11 @@
     "static/media/images.jpeg": "/static/media/images.cc3c72cc9cc4f94da8ed.jpeg",
     "index.html": "/index.html",
     "main.e0a1d955.css.map": "/static/css/main.e0a1d955.css.map",
-    "main.abf2018b.js.map": "/static/js/main.abf2018b.js.map",
+    "main.2004eb17.js.map": "/static/js/main.2004eb17.js.map",
     "845.510933d7.chunk.js.map": "/static/js/845.510933d7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e0a1d955.css",
-    "static/js/main.abf2018b.js"
+    "static/js/main.2004eb17.js"
   ]
 }
