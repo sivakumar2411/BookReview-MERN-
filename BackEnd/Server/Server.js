@@ -17,7 +17,8 @@ app.use(express.static(path.join(_dirname,"FrontEnd/build")))
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 app.use(express.json())
-app.use("https://bookreview-mern.onrender.com",Routes);
+// app.use("https://bookreview-mern.onrender.com",Routes);
+app.use(Routes);
 
 
 

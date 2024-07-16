@@ -3,7 +3,7 @@ import axios from 'axios';
 // const Api_URL ='http://localhost:3410';
 
 // const BE_Api_URL ='http://localhost:1430';
-const BE_Api_URL ='https://bookreview-mern.onrender.com';
+const BE_Api_URL ='';
 
 // export const getAllDatas=()=> axios.get(`${Api_URL}/BookData`);
 export const getAllDatas=()=> axios.get(`${BE_Api_URL}/BookDatas/GetAll`);
