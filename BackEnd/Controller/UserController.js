@@ -47,7 +47,17 @@ export const GetUserById = async(req,res) =>{
 export const UpdateUserById = async(req,res) =>{
     try{
         const User = new UserData(req.body);
-        await UserData.findByIdAndUpdate(req.params.id,User);
+        // await UserData.findByIdAndUpdate(req.params.id,User);
+        const Users = await UserData.find();
+        for(const user of Users)
+        {
+            if(user.id !== User.id && user.uname === user.uname)
+            {
+                alert("UserName Already Exists");
+                return;
+            }
+        }
+        await User.save();
         res.status(200).json({message:"Datas Updated SuccessFully!"});
     }
     catch(error){

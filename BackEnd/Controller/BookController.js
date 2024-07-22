@@ -58,7 +58,8 @@ export const GetReccomendedBooks = async(req,res) =>
 export const UpdateBookData = async(req,res) =>{
     try{
         const BO = new BookData(req.body);
-        await BookData.findByIdAndUpdate(req.params.id,BO);
+        // await BookData.findByIdAndUpdate(req.params.id,BO,{new:true});
+        await BO.save();
         res.status(200).json({message:"Book Updated SuccessFully"});
     }
     catch(error)

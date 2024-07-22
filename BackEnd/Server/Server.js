@@ -30,6 +30,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
   }));
 
+
 app.get("*",(req,res)=>{
 
     res.sendFile(path.join(_dirname,"FrontEnd","build","index.html"));
