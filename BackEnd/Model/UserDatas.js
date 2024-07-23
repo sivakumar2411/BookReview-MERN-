@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+import { NotiFications } from "./Notification.js";
+import { Review } from "./Review.js";
 
 const UserDatas = new mongoose.Schema({
 
@@ -48,21 +50,7 @@ const UserDatas = new mongoose.Schema({
         }
     },
     notification:[
-        {
-            id:{
-                type:Number,
-                required:true
-            },
-            msg:{
-                type:String,
-                required:true
-            },
-            seen:{
-                type:Boolean,
-                required:true,
-                default:false
-            }
-        }
+        NotiFications
     ],
     intrestedGenres: {
         philosophy: Boolean,
@@ -78,24 +66,7 @@ const UserDatas = new mongoose.Schema({
         comics: Boolean,
         fantasy: Boolean
     },
-    reviews:{
-        id:{
-            type:Number,
-            // require:true
-        },
-        review:{
-            type:String,
-            // required:true
-        },
-        rating:{
-            type:Number,
-            // required:true
-        },
-        alterId:{
-            type:Number,
-            // required:true
-        }
-    }
+    reviews:[Review]
 
 })
 

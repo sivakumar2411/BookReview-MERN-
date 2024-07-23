@@ -47,17 +47,17 @@ export const GetUserById = async(req,res) =>{
 export const UpdateUserById = async(req,res) =>{
     try{
         const User = new UserData(req.body);
-        // await UserData.findByIdAndUpdate(req.params.id,User);
-        const Users = await UserData.find();
-        for(const user of Users)
-        {
-            if(user.id !== User.id && user.uname === user.uname)
-            {
-                alert("UserName Already Exists");
-                return;
-            }
-        }
-        await User.save();
+        await UserData.findByIdAndUpdate(req.params.id,User);
+        // const Users = await UserData.find();
+        // for(const user of Users)
+        // {
+        //     if(user.id !== User.id && user.uname === user.uname)
+        //     {
+        //         res.status(200).json({alert:true});
+        //         return;
+        //     }
+        // }
+        // await User.save();
         res.status(200).json({message:"Datas Updated SuccessFully!"});
     }
     catch(error){
@@ -74,7 +74,7 @@ export const UpdateReview = async(req,res) =>{
         if(!User){
             return res.status(404).json({error:"User Not Found"});
         }
-        const index = User.reviews.findIndex(review => review.id === urev.id);
+        const index = User.reviews?.findIndex((review) => review.id === urev.id);
         if(!index)
         {
             return res.status(404).json({error:"Review Not Found"});
@@ -98,12 +98,12 @@ export const NewMSG = async(req,res) =>{
         if(!User){
             return res.status(404).json({error:"User Not Found"});
         }
-        const nid = User.notifications.length > 0 ? (User.notifications.reduce((max,noti)=>{return noti.id > max ? noti.id : max}) + 1) : 1;
+        const nid = User.notification.length > 0 ? (User.notification.reduce((max,noti)=>{return noti.id > max ? noti.id : max}) + 1) : 1;
         const nmsg = {
             ...msg,
             id:nid
         }
-        User.notifications.push(nmsg);
+        User.notification.push(nmsg);
         await User.save();
         return res.status(200).json({message:"New Msg Inserted SuccessFully!"});
     }
@@ -119,12 +119,12 @@ export const MSGToAll = async(req,res) =>{
         const Users = await UserData.find();
         for(const User of Users)
         {
-            const nid = User.notifications.reduce((max,noti)=>{return noti.id > max ? noti.id : max}) + 1;
+            const nid = User.notification.reduce((max,noti)=>{return noti.id > max ? noti.id : max}) + 1;
             const nmsg = {
                 ...msg,
                 id:nid
             }
-            User.notifications.push(nmsg);
+            User.notification.push(nmsg);
             await User.save();
         }
         return res.status(200).json({message:"Msgs Inserted SuccessFully!"});

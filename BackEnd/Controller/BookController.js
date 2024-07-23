@@ -17,8 +17,7 @@ export const GetAllBooks = async(req,res) =>
 export const GetBookById = async(req,res) =>
 {
     try{
-        const {id} = req.params
-        const data = await BookData.findById(id);
+        const data = await BookData.findById(req.params.id);
         res.status(200).json(data);
     }
     catch(error)
@@ -58,8 +57,8 @@ export const GetReccomendedBooks = async(req,res) =>
 export const UpdateBookData = async(req,res) =>{
     try{
         const BO = new BookData(req.body);
-        // await BookData.findByIdAndUpdate(req.params.id,BO,{new:true});
-        await BO.save();
+        await BookData.findByIdAndUpdate(req.params.id,BO);
+        // await BO.save();
         res.status(200).json({message:"Book Updated SuccessFully"});
     }
     catch(error)
@@ -99,7 +98,7 @@ export const DeleteBook = async(req,res) =>{
 
 export const DeleteRevBook = async(req,res) =>{
     try{
-        const Book = await BookData.findById(req.params.id);
+        const Book = await BookData.find({id:req.params.id});
         res.status(200).json({message:"Book Review Deleted SuccessFully"});
     }
     catch(error)
@@ -117,7 +116,7 @@ export const UpdateRevInBook = async(req,res) =>{
         if(!Book){
             return res.status(404).json({error:"Book Not Found"});
         }
-        const index = Book.reviews.findIndex(review => review.id === Brev.id);
+        const index = Book.reviews?.findIndex((review) => review.id === Brev.id);
         if(!index)
         {
             return res.status(404).json({error:"Review Not Found"});

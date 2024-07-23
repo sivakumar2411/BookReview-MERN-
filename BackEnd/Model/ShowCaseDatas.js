@@ -9,6 +9,7 @@ const ShowcaseDatas = new mongoose.Schema({
     id:{
         type:Number,
         bookId:Number
-    }
+    },
+    Bid:{}
 
 })

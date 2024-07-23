@@ -88,9 +88,9 @@ export const addNewUser = async (data) => {
         const { data: existingData } = await getAllUserDatasFP();
         const newId =Math.max(...existingData?.map(user => user.id),0);
     const AllDatas={
-        id:newId+1,
-        uname: data.name,
         ...data,
+        id:newId + 1,
+        uname: data.name,
       gender:" ",
       region:" ",
       bio:" ",
@@ -234,7 +234,16 @@ export const DeleteReviews=async(bid,delrev)=>{
     catch(er){console.log("Error in Review Delete",er);}
 }
 
-export const UpdateUser=async(UserDt)=> await axios.put(`${BE_Api_URL}/UserDatas/UpdateById/${UserDt.id}`,UserDt);
+export const UpdateUser=async(UserDt)=> {
+    const {data:udata} = await getAllUserDatasFP();
+    for(const user of udata)
+        if(user.id !== UserDt.id && user.uname === UserDt.uname)
+        {
+            alert("UserName Already Exist");
+            return;
+        }
+    await axios.put(`${BE_Api_URL}/UserDatas/UpdateById/${UserDt.id}`,UserDt);
+}
     // try{
     // const{data:OD}=await getUserDatasbyid(UserDt.id);
     // if(OD.uname!==UserDt.uname)
@@ -283,12 +292,20 @@ export const UpdateReviewHisandRev=async(UD)=>{
             return rriv;
         })
         const promises=await Promise.all(NBDR);
-        await axios.put(`${BE_Api_URL}/BookDatas/UpdateById/${BD.id}`,{...BD,reviews:promises});
+        const NBD = {
+            ...BD,
+            reviews:promises
+        }
+        await axios.put(`${BE_Api_URL}/BookDatas/UpdateById/${NBD.id}`,NBD);
     })}
     catch(er){console.log("Error in Update Review",er);}
 }
 
-export const DeleteRevFromBook=async(Bid,Uid)=> await axios.delete(`${BE_Api_URL}/BookDatas/UpdateById/${Bid}/RemoveReview/${Uid}`)
+export const DeleteRevFromBook=async(Bid,Uid)=>{
+    const{data:Book} = await getBookDatasbyid(Bid);
+    const NR = Book.reviews.filter(rev=>rev.alterId !== Uid);
+    await UpdateBookDatas(Bid,{...Book,reviews:NR});
+}
 
 export const UpdateBookRevandUserRH=async(Brev,urev)=>{
     try{
@@ -329,8 +346,27 @@ export const UpdateBookRevandUserRH=async(Brev,urev)=>{
     // }
     // await axios.put(`${Api_URL}/BookData/${urev.Bid}`,NBD);
     console.log(urev,Brev);
-    await axios.put(`${BE_Api_URL}/UserDatas/UpdateById/Review/${Brev.alterId}`,urev);
-    await axios.put(`${BE_Api_URL}/BookDatas/UpdateById/Review/${urev.alterId}`,Brev);
+    // await axios.put(`${BE_Api_URL}/UserDatas/UpdateById/Review/${Brev.alterId}`,urev);
+    // await axios.put(`${BE_Api_URL}/BookDatas/UpdateById/Review/${urev.alterId}`,Brev);
+
+    const {data:Book} = await getBookDatasbyid(urev.alterId);
+    const {data:User} = await getUserById(Brev.alterId);
+
+    console.log(Book,User);
+    const NBR = Book.reviews.map(rev=>
+        rev.alterId === Brev.alterId ? {...rev, review:urev.review, rating:Brev.rating}:rev
+    )
+
+    const NUR = User.reviews.map(rev=>
+        rev.alterId === urev.alterId ? {...rev, review:urev.review, rating:urev.rating}:rev
+    )
+
+    const NBook = {...Book, reviews: NBR}
+    const NUser = {...User, reviews: NUR}
+
+    UpdateUser(NUser);
+    UpdateBookDatas(NBook.id,NBook);
+
 }
     catch(error){console.log("Error in Updating",error);}
 }

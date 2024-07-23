@@ -65,7 +65,7 @@ export const EditBook = () => {
     useEffect(()=>{
         const fetch=async()=>{
             await getBookDatasbyid(BookId)
-            .then((res)=>setDts(res.data));
+            .then((res)=>{setDts(res.data);console.log(res.data);});
         }
         fetch();
     },[])

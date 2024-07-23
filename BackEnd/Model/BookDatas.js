@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { Review } from "./Review.js";
 
 const BookDatas = new mongoose.Schema({
 
@@ -42,24 +43,7 @@ const BookDatas = new mongoose.Schema({
         fantasy: Boolean,
         all:Boolean
     },
-    reviews:{
-        id:{
-            type:Number,
-            // require:true
-        },
-        review:{
-            type:String,
-            // required:true
-        },
-        rating:{
-            type:Number,
-            // required:true
-        },
-        alterId:{
-            type:Number,
-            // required:true
-        }
-    },
+    reviews:[Review],
     bookCover:{
         url:{
             type:String,

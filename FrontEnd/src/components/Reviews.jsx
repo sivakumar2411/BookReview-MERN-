@@ -46,7 +46,7 @@ const Reviews = () => {
     const fetchdata = async()=>
     {
       await getAllDatas()
-      .then((res)=>{setData(res.data);setserbo(res.data);console.log(res.data)})
+      .then((res)=>{setData(res.data);setserbo(res.data);})
       .catch((err)=>console.log(err));
       hidelodaer();
     }

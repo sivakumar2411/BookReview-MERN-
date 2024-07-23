@@ -8,7 +8,7 @@ router.post("/UserDatas/InsertNew",PostNewUser);
 router.get("/UserDatas/GetAll",GetAllUser);
 router.get("/UserDatas/GetById/:id",GetUserById);
 router.put("/UserDatas/UpdateById/:id",UpdateUserById);
-router.put("/UserDatas/UpdateById/Review/:id",UpdateReview);
+// router.put("/UserDatas/UpdateById/Review/:id",UpdateReview);
 router.put("/UserDatas/MsgToAll",MSGToAll);
 router.put("/UserDatas/MsgById/:id",NewMSG);
 
@@ -19,7 +19,7 @@ router.get("/BookDatas/GetAll",GetAllBooks);
 router.get("/BookDatas/GetById/:id",GetBookById);
 router.post("/BookDatas/GetRecommdBooks",GetReccomendedBooks);
 router.put("/BookDatas/UpdateById/:id",UpdateBookData);
-router.put("/BookDatas/UpdateById/Review/:id",UpdateRevInBook);
+// router.put("/BookDatas/UpdateById/Review/:id",UpdateRevInBook);
 router.delete("/BookDatas/DeleteById/:id",DeleteBook);
 
 
