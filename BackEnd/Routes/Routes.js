@@ -31,7 +31,7 @@ router.delete("/BookDatas/DeleteById/:id",DeleteBook);
 
 
 router.get("/BookShowCase/GetAll",getAllShowCase);
-router.put("/BookShowCase/InsertNew:id",AddForShowCase);
+router.post("/BookShowCase/InsertNew:id",AddForShowCase);
 router.delete("/BookShowCase/Remove:id",RemoveShowCase);
 
 
