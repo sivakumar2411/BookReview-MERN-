@@ -1,8 +1,7 @@
 import express from "express";
 import { GetAllUser, GetUserById, MSGToAll, NewMSG, PostNewUser, UpdateReview, UpdateUserById } from "../Controller/UserController.js";
 import { DeleteBook, GetAllBooks, GetBookById, GetReccomendedBooks, NewBook, UpdateBookData, UpdateRevInBook } from "../Controller/BookController.js";
-import { getAllShowCase, RemoveShowCase } from "../Controller/ShowCaseController.js";
-import { AddForShowCase } from "../../FrontEnd/src/assets/Json Related Things/JSONAPI.js";
+import { AddShowCase, getAllShowCase, RemoveShowCase } from "../Controller/ShowCaseController.js";
 
 const router = express.Router();
 
@@ -31,7 +30,7 @@ router.delete("/BookDatas/DeleteById/:id",DeleteBook);
 
 
 router.get("/BookShowCase/GetAll",getAllShowCase);
-router.post("/BookShowCase/InsertNew:id",AddForShowCase);
+router.post("/BookShowCase/InsertNew:id",AddShowCase);
 router.delete("/BookShowCase/Remove:id",RemoveShowCase);
 
 
