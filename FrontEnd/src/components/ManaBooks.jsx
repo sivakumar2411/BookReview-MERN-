@@ -23,8 +23,8 @@ const ManaBooks = () => {
             const {data:eda}=await getAllDatas();
             setBoo(eda);
             setBooo(eda);
-            // const {data:sbb}=await GetShowCaseDatas();
-            // setSB(sbb);
+            const {data:sbb}=await GetShowCaseDatas();
+            setSB(sbb);
         }
         fetch();
     },[conmsg])
