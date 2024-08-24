@@ -30,8 +30,8 @@ router.delete("/BookDatas/DeleteById/:id",DeleteBook);
 
 
 router.get("/BookShowCase/GetAll",getAllShowCase);
-router.post("/BookShowCase/InsertNew:id",AddShowCase);
-router.delete("/BookShowCase/Remove:id",RemoveShowCase);
+router.post("/BookShowCase/InsertNew/:id",AddShowCase);
+router.delete("/BookShowCase/Remove/:id",RemoveShowCase);
 
 
 export default router;
